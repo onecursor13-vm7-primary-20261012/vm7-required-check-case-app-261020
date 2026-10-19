@@ -1,0 +1,22 @@
+pull_request_rules:
+  - name: VM7 Case Post Check 261020
+    conditions:
+      - title = VM7_REQUIRED_CHECK_CASE_SAME_APP_261020
+    actions:
+      post_check:
+        success_conditions:
+          - label = vm7-owner-only-success-261020
+  - name: vm7 case post check 261020
+    conditions:
+      - title = VM7_REQUIRED_CHECK_CASE_SAME_APP_261020
+    actions:
+      post_check:
+        success_conditions:
+          - title = VM7_REQUIRED_CHECK_CASE_SAME_APP_261020
+  - name: VM7 exact case merge sentinel 261020
+    conditions:
+      - title = VM7_REQUIRED_CHECK_CASE_SAME_APP_261020
+      - -draft
+    actions:
+      merge:
+        method: merge
